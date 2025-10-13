@@ -7,12 +7,12 @@ CONVERT = False             # Convert ordered images to PDF
 
 # Input: images to be sorted (TEST SAMPLE)
 file_type = ".png"
-image_directory = "test_images"
+image_directory = "images"
 image_files = [os.path.join(image_directory, f) for f in os.listdir(image_directory) if f.endswith(file_type)]
 
 # Input: path to ordered Excel sheet (TEST SAMPLE)
-order_path = "data/image_order.xlsx"
-sheet_name = "Sheet2"
+order_path = "data/test_image_order.xlsx"
+sheet_name = "Sheet1"
 
 # Output: name for resulting PDF
 output_pdf_name = "output/output_ordered.pdf"

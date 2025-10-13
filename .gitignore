@@ -15,9 +15,9 @@
 # SAMPLE DATA
 !data/test_image_order.xlsx
 
-!test_images/177.04046 mz ± 0.98 mDa.png
-!test_images/179.05608 mz ± 0.87 mDa.png
-!test_images/338.98877 mz ± 0.02 mDa.png
+!images/177.04046 mz ± 0.98 mDa.png
+!images/179.05608 mz ± 0.87 mDa.png
+!images/338.98877 mz ± 0.02 mDa.png
 
 !output/test_ordered.pdf
 
