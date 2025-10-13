@@ -7,7 +7,7 @@ CONVERT = False             # Convert ordered images to PDF
 
 # Input: images to be sorted (TEST SAMPLE)
 file_type = ".png"
-image_directory = "images"
+image_directory = "test_images"
 image_files = [os.path.join(image_directory, f) for f in os.listdir(image_directory) if f.endswith(file_type)]
 
 # Input: path to ordered Excel sheet (TEST SAMPLE)
