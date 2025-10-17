@@ -4,6 +4,7 @@ from PIL import Image
 
 CHECK_DUPLICATES = False    # Check & warn for duplicate images
 CONVERT = False             # Convert ordered images to PDF
+IS_WINDOWS = True           # Toggle for Windows/Mac support
 
 # Input: images to be sorted (TEST SAMPLE)
 file_type = ".png"
@@ -26,6 +27,8 @@ value_list = df[value].tolist()
 
 # Count number of duplicates
 dup_count = 0
+start_char = '\\' if IS_WINDOWS else ""
+end_char = ' ' # NOTE: Tailored for [m/z] structure in MALDI files
 
 print()
 print(f"Image Files: {len(image_files)}")
@@ -43,9 +46,6 @@ for target in value_list:
     for img in image_files:
         
         # Extract value from filename
-        start_char = '/'
-        end_char = ' ' # NOTE: Tailored for [m/z] structure in MALDI files
-
         start_index = img.find(start_char)
         end_index = img.find(end_char, start_index + 1)
         img_value = img[start_index + 1:end_index]
